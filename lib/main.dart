@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'Colors.dart';
-import 'Custom_Navigation_Bar.dart';
+import 'Bottom_BarScreens/Custom_Navigation_Bar.dart';
 
 void main() => runApp(MyApp());
 

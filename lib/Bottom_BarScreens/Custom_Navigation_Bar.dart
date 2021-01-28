@@ -3,10 +3,10 @@ import 'dart:ffi';
 import 'package:egypt_rails/Bottom_BarScreens/MyAccount/My_Account.dart';
 import 'package:flutter/material.dart';
 
-import 'Bottom_BarScreens/Enertainment/Entertainment.dart';
-import 'Bottom_BarScreens/MyTrips/My_Trips.dart';
-import 'Colors.dart';
-import 'Bottom_BarScreens/MyTrips/Home_Screen.dart';
+import 'Enertainment/Entertainment.dart';
+import 'MyTrips/My_Trips.dart';
+import '../Colors.dart';
+import 'HomeScreen/Home_Screen.dart';
 class CustomNavigationBar extends StatefulWidget {
   @override
   _CustomNavigationBarState createState() => _CustomNavigationBarState();
