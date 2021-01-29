@@ -21,6 +21,7 @@ class _MyAppState extends State<MyApp> {
         primaryColor: Color(getColorHexFromStr('#F07611')),
         // red color used in splash
         accentColor: Color(getColorHexFromStr('#FDF2E4E6')),
+        fontFamily: 'Roboto',
       ),
       home: CustomNavigationBar(),
     );
