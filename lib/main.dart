@@ -22,8 +22,7 @@ class _MyAppState extends State<MyApp> {
         // red color used in splash
         accentColor: Color(getColorHexFromStr('#FDF2E4E6')),
       ),
-      home: CustomNavigationBar()
-      ,
+      home: CustomNavigationBar(),
     );
   }
 }
