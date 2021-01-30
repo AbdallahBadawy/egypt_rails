@@ -1,3 +1,4 @@
+import 'package:egypt_rails/Home.dart';
 import 'package:flutter/material.dart';
 
 import 'Bottom_BarScreens/Custom_Navigation_Bar.dart';
@@ -22,11 +23,14 @@ class _MyAppState extends State<MyApp> {
         primaryColor: Color(getColorHexFromStr('#F07611')),
         // red color used in splash
         accentColor: Color(getColorHexFromStr('#FDF2E4E6')),
+        fontFamily: 'Roboto',
       ),
+
       home:
-       CustomNavigationBar(),
+       Favorites(),
        
       
+
     );
   }
 }
