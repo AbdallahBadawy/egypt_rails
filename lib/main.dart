@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'Colors.dart';
 import 'Bottom_BarScreens/Custom_Navigation_Bar.dart';
+import 'Colors.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,6 +14,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      
       color: Theme.of(context).primaryColor,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -22,8 +23,10 @@ class _MyAppState extends State<MyApp> {
         // red color used in splash
         accentColor: Color(getColorHexFromStr('#FDF2E4E6')),
       ),
-      home: CustomNavigationBar()
-      ,
+      home:
+       CustomNavigationBar(),
+       
+      
     );
   }
 }
