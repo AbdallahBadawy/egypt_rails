@@ -2,6 +2,8 @@ import 'package:egypt_rails/Colors.dart';
 import 'package:flutter/material.dart';
 import 'package:share/share.dart';
 
+import 'Help_Screens/Help_Screen.dart';
+
 Widget _titleCard({String title, IconData icon, Function onTap}) {
   return InkWell(
     onTap: onTap,
@@ -42,7 +44,13 @@ Widget homeDrawer(BuildContext context) {
           _titleCard(title: 'Rate This App', icon: Icons.star, onTap: () {}),
           _titleCard(title: 'Favourites', icon: Icons.favorite, onTap: () {}),
           _titleCard(title: 'About Us', icon: Icons.info, onTap: () {}),
-          _titleCard(title: 'Help', icon: Icons.help_outline, onTap: () {}),
+          _titleCard(
+              title: 'Help',
+              icon: Icons.help_outline,
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HelpScreen()));
+              }),
         ],
       ),
     ),

@@ -27,7 +27,7 @@ class _MyAppState extends State<MyApp> {
       ),
 
       home:
-       Favorites(),
+       CustomNavigationBar(),
        
       
 
