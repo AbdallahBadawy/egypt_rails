@@ -15,7 +15,7 @@ class HelpScreen extends StatelessWidget {
           child: Stack(
             children: [
               Positioned(
-                  top: MediaQuery.of(context).size.height / 20,
+                  top: MediaQuery.of(context).size.height / 25,
                   child: Row(
                     children: [
                       Icon(Icons.arrow_back, size: 50),
@@ -30,7 +30,76 @@ class HelpScreen extends StatelessWidget {
                       )
                     ],
                   )),
-              
+              Positioned(
+                  top: MediaQuery.of(context).size.height / 8,
+                  left: 30,
+                  child: Container(
+                    padding: EdgeInsets.all(10),
+                    width: MediaQuery.of(context).size.width - 60,
+                    height: MediaQuery.of(context).size.height / 1.20,
+                    decoration: BoxDecoration(
+                        color: Theme.of(context).accentColor,
+                        borderRadius: BorderRadius.circular(50)),
+                    child: Column(children: [
+                      Center(
+                        child: Container(
+                          margin: EdgeInsets.all(20),
+                          width: 60,
+                          height: 60,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(60)),
+                          child: Icon(
+                            Icons.help_outline_rounded,
+                            size: 55,
+                            color: Theme.of(context).primaryColor,
+                          ),
+                        ),
+                      ),
+                      Text("-- How to book Ticket ?",
+                          style: TextStyle(
+                              fontSize: 30,
+                              fontFamily: "Roboto",
+                              fontWeight: FontWeight.bold,
+                              color: Theme.of(context).primaryColor)),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height / 15,
+                      ),
+                      Text("-- How to book Ticket ?",
+                          style: TextStyle(
+                              fontSize: 30,
+                              fontFamily: "Roboto",
+                              fontWeight: FontWeight.bold,
+                              color: Theme.of(context).primaryColor)),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height / 15,
+                      ),
+                      Text("-- How to book Ticket ?",
+                          style: TextStyle(
+                              fontSize: 30,
+                              fontFamily: "Roboto",
+                              fontWeight: FontWeight.bold,
+                              color: Theme.of(context).primaryColor)),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height / 15,
+                      ),
+                      Text("-- How to book Ticket ?",
+                          style: TextStyle(
+                              fontSize: 30,
+                              fontFamily: "Roboto",
+                              fontWeight: FontWeight.bold,
+                              color: Theme.of(context).primaryColor)),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height / 15,
+                      ),
+                      Text("-- How to book Ticket ?",
+                          style: TextStyle(
+                              fontSize: 30,
+                              fontFamily: "Roboto",
+                              fontWeight: FontWeight.bold,
+                              color: Theme.of(context).primaryColor))
+                    ]),
+                  ))
             ],
           )),
     );
