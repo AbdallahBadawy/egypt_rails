@@ -24,7 +24,7 @@ class _MyAppState extends State<MyApp> {
         accentColor: Color(getColorHexFromStr('#FDF2E4E6')),
         fontFamily: 'Roboto',
       ),
-      home: Favorites(),
+      home:CustomNavigationBar(),
     );
   }
 }
