@@ -15,21 +15,22 @@ class HelpScreen extends StatelessWidget {
           child: Stack(
             children: [
               Positioned(
-                  top: MediaQuery.of(context).size.height / 25,
-                  child: Row(
-                    children: [
-                      Icon(Icons.arrow_back, size: 50),
-                      Text("Help",
-                          style: TextStyle(
-                              fontSize: 28, fontWeight: FontWeight.bold)),
-                      SizedBox(width: MediaQuery.of(context).size.width / 1.77),
-                      Icon(
-                        Icons.settings,
-                        size: 50,
-                        color: Theme.of(context).primaryColor,
-                      )
-                    ],
-                  )),
+                top: MediaQuery.of(context).size.height / 25,
+                child: Row(
+                  children: [
+                    Icon(Icons.arrow_back, size: 50),
+                    Text("Help",
+                        style: TextStyle(
+                            fontSize: 28, fontWeight: FontWeight.bold)),
+                    SizedBox(width: MediaQuery.of(context).size.width / 1.77),
+                    Icon(
+                      Icons.settings,
+                      size: 50,
+                      color: Theme.of(context).primaryColor,
+                    )
+                  ],
+                ),
+              ),
               Positioned(
                   top: MediaQuery.of(context).size.height / 8,
                   left: 30,
