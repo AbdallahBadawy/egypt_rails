@@ -26,10 +26,13 @@ class _MyAppState extends State<MyApp> {
         fontFamily: 'Roboto',
       ),
 
-      home:
-       CustomNavigationBar(),
+      home:CustomNavigationBar(),
+
+
+     
        
       
+
 
     );
   }
