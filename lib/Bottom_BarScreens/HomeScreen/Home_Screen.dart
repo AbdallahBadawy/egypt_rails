@@ -27,19 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     _globalKey.currentState.openDrawer();
                   }),
               notificationsButton(context),
-              Positioned(
-                top: 25,
-                left: 65,
-                child: Row(
-                  children: [
-                    Text('T',
-                        style: TextStyle(
-                            fontSize: 48,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'Lucida'))
-                  ],
-                ),
-              ),
+              appName(context),
               trainLines(
                   context: context,
                   onChanged: (value) {
