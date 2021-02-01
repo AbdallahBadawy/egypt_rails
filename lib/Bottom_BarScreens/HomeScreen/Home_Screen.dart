@@ -1,5 +1,8 @@
+import 'package:egypt_rails/Background.dart';
 import 'package:egypt_rails/Drawer/Home_Drawer.dart';
+import 'package:egypt_rails/NotificationsButton.dart';
 import 'package:flutter/material.dart';
+import 'home_Widgets.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -12,32 +15,46 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _globalKey,
-      body: Container(
-        child: Stack(
-          children: [
-            Positioned(
-                top: 20,
-                left: 10,
-                child: IconButton(
-                    icon: Icon(
-                      Icons.menu,
-                      size: 40,
-                    ),
-                    onPressed: () {
-                      _globalKey.currentState.openDrawer();
-                    })),
-            Positioned(
-                top: 20,
-                right: 20,
-                child: IconButton(
-                    icon: Icon(
-                      Icons.notifications,
-                      size: 50,
-                      color: Theme.of(context).primaryColor,
-                    ),
-                    onPressed: () {})),
-          ],
-        ),
+      backgroundColor: Colors.white,
+      body: ListView(
+        children: [
+          Stack(
+            children: [
+              background(context),
+              drawerMenu(
+                  context: context,
+                  onPressed: () {
+                    _globalKey.currentState.openDrawer();
+                  }),
+              notificationsButton(context),
+              Positioned(
+                top: 25,
+                left: 65,
+                child: Row(
+                  children: [
+                    Text('T',
+                        style: TextStyle(
+                            fontSize: 48,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Lucida'))
+                  ],
+                ),
+              ),
+              trainLines(
+                  context: context,
+                  onChanged: (value) {
+                    setState(() {
+                      group = value;
+                    });
+                  },
+                  dropButtonOnChanged: (value) {
+                    setState(() {
+                      newValue = value;
+                    });
+                  }),
+            ],
+          ),
+        ],
       ),
       drawer: homeDrawer(context),
     );
