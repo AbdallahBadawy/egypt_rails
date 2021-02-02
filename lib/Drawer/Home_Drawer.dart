@@ -4,9 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:share/share.dart';
 import 'Help_Screens/Help_Screen.dart';
 
-
-
-Widget _titleCard({String title, IconData icon, Function onTap}) {
+Widget _titleCard({BuildContext context, String title, IconData icon, Function onTap}) {
   return InkWell(
     onTap: onTap,
     child: Padding(
@@ -15,7 +13,7 @@ Widget _titleCard({String title, IconData icon, Function onTap}) {
         children: [
           Icon(
             icon,
-            size: 45,
+            size: MediaQuery.of(context).size.width / 8.5,
             color: Color(getColorHexFromStr('#F07611')),
           ),
           SizedBox(width: 20),
@@ -33,26 +31,26 @@ Widget homeDrawer(BuildContext context) {
       color: Color(getColorHexFromStr('#F0DFC5')),
       child: ListView(
         children: [
-          SizedBox(height: 15),
-          _titleCard(title: 'Muhamed Ahmed', icon: Icons.person, onTap: () {}),
-          _titleCard(title: 'Settings', icon: Icons.settings, onTap: () {}),
-          _titleCard(
+          SizedBox(height: 10),
+          _titleCard(context: context, title: 'Muhamed Ahmed', icon: Icons.person, onTap: () {}),
+          _titleCard(context: context, title: 'Settings', icon: Icons.settings, onTap: () {}),
+          _titleCard(context: context, 
               title: 'Share App',
               icon: Icons.share,
               onTap: () {
                 Share.share('https://www.google.com');
               }),
-          _titleCard(title: 'Contact Us', icon: Icons.call, onTap: () {}),
-          _titleCard(title: 'Rate This App', icon: Icons.star, onTap: () {}),
-          _titleCard(title: 'Favourites', icon: Icons.favorite, onTap: () {}),
-          _titleCard(
+          _titleCard(context: context, title: 'Contact Us', icon: Icons.call, onTap: () {}),
+          _titleCard(context: context, title: 'Rate This App', icon: Icons.star, onTap: () {}),
+          _titleCard(context: context, title: 'Favourites', icon: Icons.favorite, onTap: () {}),
+          _titleCard(context: context, 
               title: 'About Us',
               icon: Icons.info,
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => AboutUs()));
               }),
-          _titleCard(
+          _titleCard(context: context, 
               title: 'Help',
               icon: Icons.help_outline,
               onTap: () {
