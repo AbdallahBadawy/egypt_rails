@@ -20,6 +20,8 @@ class _HelpScreenState extends State<HelpScreen> {
           child: Stack(
             children: [
               Positioned(
+<<<<<<< HEAD
+                  top: MediaQuery.of(context).size.height / 25,
                   
                   child: Row(
                     children: [
@@ -40,7 +42,43 @@ class _HelpScreenState extends State<HelpScreen> {
                       )
                     ],
                   )),
+=======
+                top: MediaQuery.of(context).size.height / 25,
+                child: Row(
+                  children: [
+                    Icon(Icons.arrow_back, size: 50),
+                    Text("Help",
+                        style: TextStyle(
+                            fontSize: 28, fontWeight: FontWeight.bold)),
+                    SizedBox(width: MediaQuery.of(context).size.width / 1.77),
+                    Icon(
+                      Icons.settings,
+                      size: 50,
+                      color: Theme.of(context).primaryColor,
+                    )
+                  ],
+                ),
+              ),
+>>>>>>> 70b7e024a73f2419007f8719769d53eda0e56dbd
               Positioned(
+                  top: MediaQuery.of(context).size.height / 8,
+                  left: 30,
+                  child: Container(
+
+                    padding: EdgeInsets.all(10),
+                    width: MediaQuery.of(context).size.width - 60,
+                    height: MediaQuery.of(context).size.height / 1.2,
+                    decoration: BoxDecoration(
+                      boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 2,
+                            blurRadius: 2,
+                            offset: Offset(0, 2),
+                          )
+                        ],
+                        color: Theme.of(context).accentColor,
+                        borderRadius: BorderRadius.circular(50)),
                     child: ListView(children: [
                       Center(
                         child: Container(
@@ -106,7 +144,7 @@ class _HelpScreenState extends State<HelpScreen> {
                               fontWeight: FontWeight.bold,
                               color: Theme.of(context).primaryColor)))
                     ]),
-                  )
+                  ))
             ],
           )),
     );

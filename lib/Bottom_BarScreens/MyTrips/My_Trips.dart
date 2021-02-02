@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../Background.dart';
+
 class MyTripsScreen extends StatefulWidget {
   @override
   _MyTripsScreenState createState() => _MyTripsScreenState();
@@ -10,16 +12,11 @@ class _MyTripsScreenState extends State<MyTripsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
-        decoration: BoxDecoration(
-          image: new DecorationImage(
-            image: new AssetImage("assets/images/background.jpg"),
-            fit: BoxFit.fill,
-          ),
-        ),
         child: Stack(
           children: [
+            Positioned(
+                top: MediaQuery.of(context).size.height / 31,
+                child: background(context)),
             Positioned(
               top: MediaQuery.of(context).size.height / 25,
               child: Row(
@@ -51,22 +48,22 @@ class _MyTripsScreenState extends State<MyTripsScreen> {
                   child: Column(
                     children: [
                       Container(
-                          margin: EdgeInsets.all(30),
-                          child: Icon(
-                            Icons.favorite,
-                            color: Color(0XFFF07611),
-                            size: 50,
-                          ),
-                          decoration: BoxDecoration(
-                              color: Color(0XFFFFFFFF),
-                              borderRadius: BorderRadius.circular(25))),
+                        child: Icon(
+                          Icons.favorite,
+                          color: Color(0XFFF07611),
+                          size: 50,
+                        ),
+                        decoration: BoxDecoration(
+                          color: Color(0XFFFFFFFF),
+                          borderRadius: BorderRadius.circular(25),
+                        ),
+                      ),
                       Padding(
                         padding: const EdgeInsets.only(top: 1),
                         child: Center(
                           child: Container(
                             margin: EdgeInsets.all(5),
-                            width: 310,
-                            height: MediaQuery.of(context).size.height * 0.65,
+                            height: MediaQuery.of(context).size.height * 0.64,
                             child: ListView.builder(
                               scrollDirection: Axis.vertical,
                               itemCount: 10,

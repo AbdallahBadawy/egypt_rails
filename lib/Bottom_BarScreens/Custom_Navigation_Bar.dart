@@ -1,6 +1,6 @@
 import 'dart:ffi';
 
-import 'package:egypt_rails/Bottom_BarScreens/MyAccount/My_Account.dart';
+import 'package:egypt_rails/Bottom_BarScreens/Weather/Weather.dart';
 import 'package:flutter/material.dart';
 
 import 'Enertainment/Entertainment.dart';
@@ -22,7 +22,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
     HomeScreen(),
     MyTripsScreen(),
     EntertainmentScreen(),
-    MyAccountScreen()
+    MyWeatherScreen()
   ];
   int selectedPageindex=0;
   // ignore: unused_element
@@ -45,7 +45,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
       BottomNavigationBarItem(icon: Icon(Icons.home_outlined,size: 40,),title: Text("Home",style: TextStyle(fontFamily:"Roboto",fontSize: 15),)),
       BottomNavigationBarItem(icon: Icon(Icons.badge,size: 40,),title: Text("My Trips",style: TextStyle(fontFamily:"Roboto",fontSize: 15))),
       BottomNavigationBarItem(icon: Icon(Icons.set_meal,size: 40,),title: Text("Entertainment",style: TextStyle(fontFamily:"Roboto",fontSize: 15))),
-      BottomNavigationBarItem(icon: Icon(Icons.person,size: 40,),title: Text("My Account",style: TextStyle(fontFamily:"Roboto",fontSize: 15)))
+      BottomNavigationBarItem(icon: Icon(Icons.person,size: 40,),title: Text("Weather",style: TextStyle(fontFamily:"Roboto",fontSize: 15)))
       ] ,)
   
     );
