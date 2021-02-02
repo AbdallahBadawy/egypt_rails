@@ -8,7 +8,7 @@ Widget drawerMenu({BuildContext context, Function onPressed}) {
       child: IconButton(
           icon: Icon(
             Icons.menu_rounded,
-            size: 40,
+            size: MediaQuery.of(context).size.width / 9,
           ),
           onPressed: onPressed));
 }
@@ -64,12 +64,11 @@ int group = 1;
 Widget ticketType(
     {BuildContext context, int val, Function onChanged, String text}) {
   return Row(
-    mainAxisAlignment: MainAxisAlignment.start,
     children: [
       Container(
         width: 30,
         height: 15,
-        margin: EdgeInsets.symmetric(horizontal: 3),
+        margin: EdgeInsets.all(5),
         child: Radio(
           value: val,
           groupValue: group,
@@ -162,7 +161,7 @@ Widget trainLines(
                       context: context,
                       onChanged: onChanged,
                       val: 3,
-                      text: '2nd Class'),
+                      text: '2nd'),
                 ],
               ),
             ),
@@ -177,15 +176,15 @@ Widget trainLines(
         ),
       ),
       SizedBox(height: 12),
-      preferences(
+      preferences(context: context,
           image: 'assets/images/Live Train View.png',
           title: 'Train Between',
           onTap: null),
-      preferences(
+      preferences(context: context,
           image: 'assets/images/Live Train View.png',
           title: 'Live Train View',
           onTap: null),
-      preferences(
+      preferences(context: context,
           image: 'assets/images/Destination Alarm.png',
           title: 'Destination Alarm',
           onTap: null),
@@ -193,21 +192,23 @@ Widget trainLines(
   );
 }
 
-Widget preferences({String image, String title, Function onTap}) {
+Widget preferences({BuildContext context, String image, String title, Function onTap}) {
   return InkWell(
     onTap: onTap,
     child: Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 40),
+      padding: const EdgeInsets.symmetric(horizontal: 30),
       child: Row(
         children: [
           Image(
-            width: 120,
-            height: 120,
+            width: MediaQuery.of(context).size.width / 3.2,
             image: AssetImage(image),
           ),
-          Text(
-            title,
-            style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700),
+          Container(
+            width: MediaQuery.of(context).size.width / 2,
+            child: Text(
+              title,
+              style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700),
+            ),
           )
         ],
       ),
