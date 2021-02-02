@@ -127,9 +127,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                                       height: 40,
                                                       decoration: BoxDecoration(
                                                         borderRadius:
-                                                            BorderRadius.circular(
-                                                                40),
-                                                      ),
+                                                            BorderRadius.circular(40),),
                                                       child: Image(
                                                         image: AssetImage(
                                                             'assets/images/cash-payment.png'),
