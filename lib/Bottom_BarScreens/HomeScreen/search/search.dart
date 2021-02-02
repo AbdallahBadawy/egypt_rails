@@ -98,48 +98,49 @@ class _SearchScreenState extends State<SearchScreen> {
                                             ),
                                           ],
                                         )),
-                                        Container(
-                                          child: Row(
-                                            children: [
-                                              Container(
-                                                child: Center(
-                                                  child: Container(
-                                                   // margin: EdgeInsets.all(20),
-                                                    width: 40,
-                                                    height: 40,
-                                                    decoration: BoxDecoration(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              40),
-                                                    ),
-                                                    child: Image(
-                                                      image: AssetImage(
-                                                          'assets/images/Weather2x.png'),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                              Container(
-                                                child: Center(
-                                                  child: Container(
-                                                    //margin: EdgeInsets.all(20),
-                                                    width: 40,
-                                                    height: 40,
-                                                    decoration: BoxDecoration(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              40),
-                                                    ),
-                                                    child: Image(
-                                                      image: AssetImage(
-                                                          'assets/images/Weather2x.png'),
+                                        SizedBox(width: MediaQuery.of(context).size.width*.28,),
+                                        Expanded(
+                                          child: Container(
+                                            child: Row(
+                                              children: [
+                                                Container(
+                                                  child: Center(
+                                                    child: Container(
+                                                      width: 40,
+                                                      height: 40,
+                                                      decoration: BoxDecoration(
+                                                        borderRadius:
+                                                            BorderRadius.circular(
+                                                                40),
+                                                      ),
+                                                      child: Image(
+                                                        image: AssetImage(
+                                                            'assets/images/fav.png'),
+                                                      ),
                                                     ),
                                                   ),
                                                 ),
-                                              ),
-                                            ],
+                                                Container(
+                                                  child: Center(
+                                                    child: Container(
+                                                      width: 40,
+                                                      height: 40,
+                                                      decoration: BoxDecoration(
+                                                        borderRadius:
+                                                            BorderRadius.circular(
+                                                                40),
+                                                      ),
+                                                      child: Image(
+                                                        image: AssetImage(
+                                                            'assets/images/cash-payment.png'),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
                                           ),
-                                        )
+                                        ),
                                       ],
                                     ),
                                   ),

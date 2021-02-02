@@ -53,6 +53,11 @@ flutter:
      - assets/images/About Us.png
      - assets/images/Weather.png
      - assets/images/Weather2x.png
+     - assets/images/cash-payment.png
+     - assets/images/cash-payment2x.png
+     - assets/images/fav.png
+     - assets/images/fav2x.png
+     - assets/images/About Us.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
