@@ -50,8 +50,12 @@ flutter:
      - assets/images/background.jpg
      - assets/images/Live Train View.png
      - assets/images/Destination Alarm.png
+<<<<<<< HEAD
      - assets/images/Weather.png
      - assets/images/Weather2x.png
+=======
+     - assets/images/About Us.png
+>>>>>>> 969919656f8dea6a5a1bbca3e6504564ea1404ae
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

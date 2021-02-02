@@ -5,13 +5,32 @@ import '../../Colors.dart';
 Widget drawerMenu({BuildContext context, Function onPressed}) {
   return Positioned(
       top: 15,
-      left: 10,
+      left: 5,
       child: IconButton(
           icon: Icon(
             Icons.menu_rounded,
             size: 40,
           ),
           onPressed: onPressed));
+}
+
+Widget appName(BuildContext context) {
+  return Positioned(
+    top: 15,
+    left: MediaQuery.of(context).size.width / 7.2,
+    child: Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Text('T',
+            style: TextStyle(
+                fontSize: 55,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Lucida')),
+        Text('icketaway',
+            style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+      ],
+    ),
+  );
 }
 
 Widget textFormField(BuildContext context, String text) {
@@ -71,7 +90,7 @@ Widget trainLines(
     children: [
       SizedBox(height: 80),
       Container(
-        width: MediaQuery.of(context).size.width - 80,
+        width: MediaQuery.of(context).size.width - 90,
         padding: EdgeInsets.all(12),
         decoration: BoxDecoration(
             color: Color(getColorHexFromStr('#F6ECDF')),
@@ -101,6 +120,7 @@ Widget trainLines(
             Container(
               width: 120,
               height: 30,
+              padding: EdgeInsets.symmetric(horizontal: 10),
               decoration: BoxDecoration(
                   color: Color(getColorHexFromStr('#F8D5A799')),
                   borderRadius: BorderRadius.circular(8)),

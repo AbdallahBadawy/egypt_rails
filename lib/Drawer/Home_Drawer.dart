@@ -1,8 +1,10 @@
 import 'package:egypt_rails/Colors.dart';
+import 'package:egypt_rails/Drawer/About%20Us/About_Us.dart';
 import 'package:flutter/material.dart';
 import 'package:share/share.dart';
-
 import 'Help_Screens/Help_Screen.dart';
+
+
 
 Widget _titleCard({String title, IconData icon, Function onTap}) {
   return InkWell(
@@ -31,7 +33,7 @@ Widget homeDrawer(BuildContext context) {
       color: Color(getColorHexFromStr('#F0DFC5')),
       child: ListView(
         children: [
-          SizedBox(height: 50),
+          SizedBox(height: 15),
           _titleCard(title: 'Muhamed Ahmed', icon: Icons.person, onTap: () {}),
           _titleCard(title: 'Settings', icon: Icons.settings, onTap: () {}),
           _titleCard(
@@ -43,7 +45,13 @@ Widget homeDrawer(BuildContext context) {
           _titleCard(title: 'Contact Us', icon: Icons.call, onTap: () {}),
           _titleCard(title: 'Rate This App', icon: Icons.star, onTap: () {}),
           _titleCard(title: 'Favourites', icon: Icons.favorite, onTap: () {}),
-          _titleCard(title: 'About Us', icon: Icons.info, onTap: () {}),
+          _titleCard(
+              title: 'About Us',
+              icon: Icons.info,
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => AboutUs()));
+              }),
           _titleCard(
               title: 'Help',
               icon: Icons.help_outline,
