@@ -20,7 +20,6 @@ class _HelpScreenState extends State<HelpScreen> {
           child: Stack(
             children: [
               Positioned(
-<<<<<<< HEAD
                   top: MediaQuery.of(context).size.height / 25,
                   
                   child: Row(
@@ -42,24 +41,6 @@ class _HelpScreenState extends State<HelpScreen> {
                       )
                     ],
                   )),
-=======
-                top: MediaQuery.of(context).size.height / 25,
-                child: Row(
-                  children: [
-                    Icon(Icons.arrow_back, size: 50),
-                    Text("Help",
-                        style: TextStyle(
-                            fontSize: 28, fontWeight: FontWeight.bold)),
-                    SizedBox(width: MediaQuery.of(context).size.width / 1.77),
-                    Icon(
-                      Icons.settings,
-                      size: 50,
-                      color: Theme.of(context).primaryColor,
-                    )
-                  ],
-                ),
-              ),
->>>>>>> 70b7e024a73f2419007f8719769d53eda0e56dbd
               Positioned(
                   top: MediaQuery.of(context).size.height / 8,
                   left: 30,

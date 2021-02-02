@@ -1,27 +1,7 @@
 import 'package:egypt_rails/Colors.dart';
 import 'package:flutter/material.dart';
 
-Widget screenName(BuildContext context) {
-  return Positioned(
-    top: 15,
-    left: 5,
-    child: Row(
-      crossAxisAlignment: CrossAxisAlignment.end,
-      children: [
-        IconButton(
-            icon: Icon(
-              Icons.arrow_back_ios,
-              size: 40,
-            ),
-            onPressed: () {
-              Navigator.pop(context);
-            }),
-        Text('About Us',
-            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
-      ],
-    ),
-  );
-}
+
 
 Widget _info(String text) {
   return Text(
@@ -33,11 +13,10 @@ Widget _info(String text) {
 Widget aboutInfo(BuildContext context) {
   return Column(
     children: [
-      
       Container(
         width: MediaQuery.of(context).size.width - 70,
         padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
-        margin: EdgeInsets.symmetric(horizontal: 35, vertical: 80),
+        margin: EdgeInsets.only(left: 35, right: 35, top: 80, bottom: 10),
         decoration: BoxDecoration(
             color: Color(getColorHexFromStr('#F6ECDF')),
             borderRadius: BorderRadius.circular(40),
