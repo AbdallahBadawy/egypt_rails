@@ -18,7 +18,7 @@ class _MyTripsScreenState extends State<MyTripsScreen> {
                 top: MediaQuery.of(context).size.height / 31,
                 child: background(context)),
             Positioned(
-              top: MediaQuery.of(context).size.height / 25,
+              top: MediaQuery.of(context).size.height / 15,
               child: Row(
                 children: [
                   Icon(Icons.arrow_back, size: 50),
@@ -35,12 +35,12 @@ class _MyTripsScreenState extends State<MyTripsScreen> {
               ),
             ),
             Positioned(
-              top: MediaQuery.of(context).size.height / 8,
+              top: MediaQuery.of(context).size.height / 5.5,
               left: 30,
               child: Container(
                 padding: EdgeInsets.all(10),
                 width: MediaQuery.of(context).size.width - 60,
-                height: MediaQuery.of(context).size.height / 1.3,
+                height: MediaQuery.of(context).size.height / 1.43,
                 decoration: BoxDecoration(
                     color: Theme.of(context).accentColor,
                     borderRadius: BorderRadius.circular(50)),
@@ -63,7 +63,7 @@ class _MyTripsScreenState extends State<MyTripsScreen> {
                         child: Center(
                           child: Container(
                             margin: EdgeInsets.all(5),
-                            height: MediaQuery.of(context).size.height * 0.64,
+                            height: MediaQuery.of(context).size.height * 0.55,
                             child: ListView.builder(
                               scrollDirection: Axis.vertical,
                               itemCount: 10,
