@@ -37,7 +37,7 @@ class HelpScreen extends StatelessWidget {
                   child: Container(
                     padding: EdgeInsets.all(10),
                     width: MediaQuery.of(context).size.width - 60,
-                    height: MediaQuery.of(context).size.height / 1.20,
+                    height: MediaQuery.of(context).size.height / 1.2,
                     decoration: BoxDecoration(
                         color: Theme.of(context).accentColor,
                         borderRadius: BorderRadius.circular(50)),

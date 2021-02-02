@@ -1,3 +1,4 @@
+import 'package:egypt_rails/Bottom_BarScreens/HomeScreen/search/search.dart';
 import 'package:flutter/material.dart';
 import '../../Colors.dart';
 
@@ -147,7 +148,14 @@ Widget trainLines(
               ),
             ),
             InkWell(
-              onTap: null,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SearchScreen(),
+                  ),
+                );
+              },
               child: Text(
                 'Search',
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700),
