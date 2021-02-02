@@ -11,7 +11,7 @@ Widget drawerMenu({BuildContext context, Function onPressed}) {
             Icons.menu_rounded,
             size: MediaQuery.of(context).size.width / 9,
           ),
-          onPressed: onPressed));
+          onPressed: onPressed),);
 }
 
 Widget appName(BuildContext context) {
