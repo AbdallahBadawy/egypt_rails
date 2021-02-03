@@ -1,17 +1,19 @@
+import 'package:egypt_rails/Bottom_BarScreens/HomeScreen/TrainBetween.dart';
 import 'package:egypt_rails/Bottom_BarScreens/HomeScreen/search/search.dart';
 import 'package:flutter/material.dart';
 import '../../Colors.dart';
 
 Widget drawerMenu({BuildContext context, Function onPressed}) {
   return Positioned(
-      top: 15,
-      left: 5,
-      child: IconButton(
-          icon: Icon(
-            Icons.menu_rounded,
-            size: MediaQuery.of(context).size.width / 9,
-          ),
-          onPressed: onPressed),);
+    top: 15,
+    left: 5,
+    child: IconButton(
+        icon: Icon(
+          Icons.menu_rounded,
+          size: MediaQuery.of(context).size.width / 9,
+        ),
+        onPressed: onPressed),
+  );
 }
 
 Widget appName(BuildContext context) {
@@ -184,15 +186,21 @@ Widget trainLines(
         ),
       ),
       SizedBox(height: 12),
-      preferences(context: context,
+      preferences(
+          context: context,
           image: 'assets/images/Live Train View.png',
           title: 'Train Between',
-          onTap: null),
-      preferences(context: context,
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => TrainBetweenScreen()));
+          }),
+      preferences(
+          context: context,
           image: 'assets/images/Live Train View.png',
           title: 'Live Train View',
           onTap: null),
-      preferences(context: context,
+      preferences(
+          context: context,
           image: 'assets/images/Destination Alarm.png',
           title: 'Destination Alarm',
           onTap: null),
@@ -200,7 +208,8 @@ Widget trainLines(
   );
 }
 
-Widget preferences({BuildContext context, String image, String title, Function onTap}) {
+Widget preferences(
+    {BuildContext context, String image, String title, Function onTap}) {
   return InkWell(
     onTap: onTap,
     child: Padding(
