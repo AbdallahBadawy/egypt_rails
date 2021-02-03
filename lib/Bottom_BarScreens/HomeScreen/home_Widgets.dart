@@ -116,7 +116,7 @@ Widget trainLines(
             SizedBox(height: 15),
             textFormField(context, 'From'),
             SizedBox(height: 10),
-            textFormField(context, 'To     '),
+            textFormField(context, '   To  '),
             SizedBox(height: 10),
             Container(
               width: 120,

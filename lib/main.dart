@@ -1,6 +1,4 @@
-import 'package:egypt_rails/Home.dart';
 import 'package:flutter/material.dart';
-
 import 'Bottom_BarScreens/Custom_Navigation_Bar.dart';
 import 'Colors.dart';
 
@@ -15,7 +13,6 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      
       color: Theme.of(context).primaryColor,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -25,15 +22,7 @@ class _MyAppState extends State<MyApp> {
         accentColor: Color(getColorHexFromStr('#FDF2E4E6')),
         fontFamily: 'Roboto',
       ),
-
-      home:CustomNavigationBar(),
-
-
-     
-       
-      
-
-
+      home: CustomNavigationBar(),
     );
   }
 }

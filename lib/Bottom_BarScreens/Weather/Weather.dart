@@ -20,7 +20,7 @@ class _MyWeatherScreenState extends State<MyWeatherScreen> {
             top: MediaQuery.of(context).size.height / 31,
             child: background(context),
           ),
-          screenName(context, 'Weather'),
+          screenName(context: context, text: 'Weather', onPressed: () {}),
           Positioned(
             top: MediaQuery.of(context).size.height / 5.5,
             left: 30,

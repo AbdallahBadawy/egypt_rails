@@ -18,7 +18,7 @@ class _EntertainmentScreenState extends State<EntertainmentScreen> {
         children: [
           background(context),
           notificationsButton(context),
-          screenName(context, 'Entertainment'),
+          screenName(context: context, text: 'Entertainment', onPressed: () {}),
           entertainment(context),
         ],
       ),

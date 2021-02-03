@@ -18,7 +18,7 @@ class _MyTripsScreenState extends State<MyTripsScreen> {
             Positioned(
                 top: MediaQuery.of(context).size.height / 31,
                 child: background(context)),
-             screenName(context, 'My Trips'),
+            screenName(context: context, text: 'My Trips', onPressed: () {}),
             Positioned(
               top: MediaQuery.of(context).size.height / 5.5,
               left: 30,

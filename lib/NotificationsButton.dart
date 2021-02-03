@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 Widget notificationsButton(BuildContext context) {
   return Positioned(
-    top: MediaQuery.of(context).size.height / 31,
-    right: 25,
+    top: 5,
+    right: 15,
     child: IconButton(
         icon: Icon(
           Icons.notifications,

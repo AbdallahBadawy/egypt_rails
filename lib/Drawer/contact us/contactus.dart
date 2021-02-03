@@ -19,7 +19,12 @@ class _ContactUsState extends State<ContactUs> {
             top: MediaQuery.of(context).size.height / 31,
             child: background(context),
           ),
-          screenName(context, 'ContactUs'),
+          screenName(
+              context: context,
+              text: 'Contact Us',
+              onPressed: () {
+                Navigator.pop(context);
+              }),
           Positioned(
             top: MediaQuery.of(context).size.height / 5.5,
             left: 30,

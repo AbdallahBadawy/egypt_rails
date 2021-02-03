@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-Widget screenName(BuildContext context, String text) {
+Widget screenName({BuildContext context, String text, Function onPressed}) {
   return Positioned(
-    top: MediaQuery.of(context).size.height / 15,
+    top: MediaQuery.of(context).size.height / 40,
     left: 5,
     child: Row(
       crossAxisAlignment: CrossAxisAlignment.end,
@@ -12,11 +12,8 @@ Widget screenName(BuildContext context, String text) {
               Icons.arrow_back_ios,
               size: 40,
             ),
-            onPressed: () {
-              Navigator.pop(context);
-            }),
-        Text(text,
-            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+            onPressed: onPressed),
+        Text(text, style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
       ],
     ),
   );

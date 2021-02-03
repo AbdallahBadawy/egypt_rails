@@ -14,9 +14,13 @@ class AboutUs extends StatelessWidget {
             children: [
               background(context),
               notificationsButton(context),
-              screenName(context, 'About Us'),
+              screenName(
+                  context: context,
+                  text: 'About Us',
+                  onPressed: () {
+                    Navigator.pop(context);
+                  }),
               aboutInfo(context),
-              
             ],
           )
         ],

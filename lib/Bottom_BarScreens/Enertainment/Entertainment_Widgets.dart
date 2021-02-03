@@ -56,7 +56,25 @@ Widget entertainment(BuildContext context) {
             scrollDirection: Axis.horizontal,
             itemCount: 7,
             itemBuilder: (context, index) {
-              return InkWell(onTap: () {}, child: videos());
+              return InkWell(onTap: () {}, child: videos(context));
+            },
+          ),
+        ),
+        SizedBox(height: 10),
+        Text(
+          'Novels',
+          style: TextStyle(
+              color: Theme.of(context).primaryColor,
+              fontSize: 22,
+              fontWeight: FontWeight.bold),
+        ),
+        SizedBox(
+          height: 220,
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: 7,
+            itemBuilder: (context, index) {
+              return InkWell(onTap: () {}, child: novels(context));
             },
           ),
         ),
@@ -65,16 +83,24 @@ Widget entertainment(BuildContext context) {
   );
 }
 
-Widget videos() {
+Widget videos(BuildContext context) {
   return Column(
     children: [
       Container(
-        width: 270,
+        width: MediaQuery.of(context).size.width - 110,
         height: 160,
         margin: EdgeInsets.only(top: 20, bottom: 20, right: 15),
         decoration: BoxDecoration(
             color: Colors.teal,
             borderRadius: BorderRadius.circular(20),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.2),
+                spreadRadius: 8,
+                blurRadius: 8,
+                offset: Offset(8, 8),
+              )
+            ],
             image: DecorationImage(
               image: NetworkImage(
                   'https://elcaptain.dostor.org/upload/photo/news/12/8/600x338o/706.jpg?q=2'),
@@ -83,6 +109,38 @@ Widget videos() {
       ),
       Text(
         'Afsha goal in Champions League final',
+        style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+      ),
+    ],
+  );
+}
+
+Widget novels(BuildContext context) {
+  return Column(
+    children: [
+      Container(
+        width: MediaQuery.of(context).size.width - 110,
+        height: 160,
+        margin: EdgeInsets.only(top: 20, bottom: 20, right: 15),
+        decoration: BoxDecoration(
+            color: Colors.teal,
+            borderRadius: BorderRadius.circular(20),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.2),
+                spreadRadius: 8,
+                blurRadius: 8,
+                offset: Offset(8, 8),
+              )
+            ],
+            image: DecorationImage(
+              image: NetworkImage(
+                  'https://www.alazaheer.net/wp-content/uploads/2018/01/%D8%B1%D9%88%D8%A7%D9%8A%D8%A9-%D8%A7%D9%85%D8%A7%D8%B1%D9%8A%D8%AA%D8%A7.jpg'),
+              fit: BoxFit.cover,
+            )),
+      ),
+      Text(
+        'Amareta',
         style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
       ),
     ],
