@@ -6,7 +6,7 @@ Widget background(BuildContext context) {
     height: MediaQuery.of(context).size.height,
     child: Image(
       image: AssetImage('assets/images/background.jpg'),
-      fit: BoxFit.cover,
+      fit: BoxFit.fill,
     ),
   );
 }

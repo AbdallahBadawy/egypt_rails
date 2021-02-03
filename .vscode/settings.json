@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 //{
   //  "editor.defaultFormatter": "Dart-Code.flutter",
  //   "editor.quickSuggestions": true,
   //  "editor.suggest.showStatusBar": true
 //}
+=======
+// {
+//     "editor.defaultFormatter": "Dart-Code.flutter",
+//     "editor.quickSuggestions": true,
+//     "editor.suggest.showStatusBar": true
+// }
+>>>>>>> 925ae09867f839f53537941306b857683770d392

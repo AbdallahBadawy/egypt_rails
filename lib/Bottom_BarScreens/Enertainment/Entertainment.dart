@@ -14,6 +14,7 @@ class _EntertainmentScreenState extends State<EntertainmentScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
+<<<<<<< HEAD
         children: 
     [Stack(
   
@@ -27,8 +28,18 @@ class _EntertainmentScreenState extends State<EntertainmentScreen> {
   
   ],
   
+=======
+        children: [
+          Stack(
+            children: [
+              background(context),
+              notificationsButton(context),
+              screenName(context, 'Entertainment'),
+              entertainment(context),
+            ],
+>>>>>>> 925ae09867f839f53537941306b857683770d392
           ),
-],
+        ],
       ),
     );
   }
