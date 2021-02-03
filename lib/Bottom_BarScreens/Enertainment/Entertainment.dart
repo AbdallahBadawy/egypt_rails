@@ -13,34 +13,15 @@ class _EntertainmentScreenState extends State<EntertainmentScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-<<<<<<< HEAD
-        children: 
-    [Stack(
-  
-            children: 
-  
-  [
-          background(context),
-  notificationsButton(context),
-  screenName(context, 'Entertainment'),
-          entertainment(context),
-  
-  ],
-  
-=======
+        body: ListView(children: [
+      Stack(
         children: [
-          Stack(
-            children: [
-              background(context),
-              notificationsButton(context),
-              screenName(context, 'Entertainment'),
-              entertainment(context),
-            ],
->>>>>>> 925ae09867f839f53537941306b857683770d392
-          ),
+          background(context),
+          notificationsButton(context),
+          screenName(context, 'Entertainment'),
+          entertainment(context),
         ],
       ),
-    );
+    ]));
   }
 }
