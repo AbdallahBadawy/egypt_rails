@@ -1,3 +1,4 @@
+import 'package:egypt_rails/Bottom_BarScreens/HomeScreen/search/Payment/payment.dart';
 import 'package:flutter/material.dart';
 
 import '../../../Background.dart';
@@ -98,7 +99,12 @@ class _SearchScreenState extends State<SearchScreen> {
                                             ),
                                           ],
                                         )),
-                                        SizedBox(width: MediaQuery.of(context).size.width*.28,),
+                                        SizedBox(
+                                          width: MediaQuery.of(context)
+                                                  .size
+                                                  .width *
+                                              .28,
+                                        ),
                                         Expanded(
                                           child: Container(
                                             child: Row(
@@ -110,8 +116,8 @@ class _SearchScreenState extends State<SearchScreen> {
                                                       height: 40,
                                                       decoration: BoxDecoration(
                                                         borderRadius:
-                                                            BorderRadius.circular(
-                                                                40),
+                                                            BorderRadius
+                                                                .circular(40),
                                                       ),
                                                       child: Image(
                                                         image: AssetImage(
@@ -122,15 +128,30 @@ class _SearchScreenState extends State<SearchScreen> {
                                                 ),
                                                 Container(
                                                   child: Center(
-                                                    child: Container(
-                                                      width: 40,
-                                                      height: 40,
-                                                      decoration: BoxDecoration(
-                                                        borderRadius:
-                                                            BorderRadius.circular(40),),
-                                                      child: Image(
-                                                        image: AssetImage(
-                                                            'assets/images/cash-payment.png'),
+                                                    child: InkWell(
+                                                      onTap: () {
+                                                        Navigator.push(
+                                                          context,
+                                                          MaterialPageRoute(
+                                                            builder:
+                                                                (context) =>
+                                                                    Payment(),
+                                                          ),
+                                                        );
+                                                      },
+                                                      child: Container(
+                                                        width: 40,
+                                                        height: 40,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(40),
+                                                        ),
+                                                        child: Image(
+                                                          image: AssetImage(
+                                                              'assets/images/cash-payment.png'),
+                                                        ),
                                                       ),
                                                     ),
                                                   ),
