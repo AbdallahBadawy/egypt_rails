@@ -1,3 +1,4 @@
+import 'package:egypt_rails/Drawer/Screen_Name.dart';
 import 'package:flutter/material.dart';
 
 import '../../Background.dart';
@@ -17,23 +18,7 @@ class _MyTripsScreenState extends State<MyTripsScreen> {
             Positioned(
                 top: MediaQuery.of(context).size.height / 31,
                 child: background(context)),
-            Positioned(
-              top: MediaQuery.of(context).size.height / 15,
-              child: Row(
-                children: [
-                  Icon(Icons.arrow_back, size: 50),
-                  Text("My Trips",
-                      style:
-                          TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
-                  SizedBox(width: MediaQuery.of(context).size.width / 2.27),
-                  Icon(
-                    Icons.settings,
-                    size: 50,
-                    color: Theme.of(context).primaryColor,
-                  )
-                ],
-              ),
-            ),
+             screenName(context, 'My Trips'),
             Positioned(
               top: MediaQuery.of(context).size.height / 5.5,
               left: 30,

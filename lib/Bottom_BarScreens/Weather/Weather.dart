@@ -1,3 +1,4 @@
+import 'package:egypt_rails/Drawer/Screen_Name.dart';
 import 'package:flutter/material.dart';
 
 import '../../Background.dart';
@@ -12,39 +13,27 @@ class _MyWeatherScreenState extends State<MyWeatherScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
-        body: Stack(
-          children: [
-            Positioned(
-              top: MediaQuery.of(context).size.height / 31,
-              child: background(context),
-            ),
-            Positioned(
-              top: MediaQuery.of(context).size.height / 15,
-              child: Row(
-                children: [
-                  Icon(Icons.arrow_back, size: 50),
-                  Text(
-                    "Weather",
-                    style: TextStyle(
-                      fontSize: 28,
-                      //fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
+      backgroundColor: Colors.white,
+      body: Stack(
+        children: [
+          Positioned(
+            top: MediaQuery.of(context).size.height / 31,
+            child: background(context),
+          ),
+          screenName(context, 'Weather'),
+          Positioned(
+            top: MediaQuery.of(context).size.height / 5.5,
+            left: 30,
+            child: Container(
+              padding: EdgeInsets.all(10),
+              width: MediaQuery.of(context).size.width - 60,
+              height: MediaQuery.of(context).size.height / 1.43,
+              decoration: BoxDecoration(
+                color: Theme.of(context).accentColor,
+                borderRadius: BorderRadius.circular(50),
               ),
-            ),
-            Positioned(
-              top: MediaQuery.of(context).size.height / 5.5,
-              left: 30,
-              child: Container(
-                padding: EdgeInsets.all(10),
-                width: MediaQuery.of(context).size.width - 60,
-                height: MediaQuery.of(context).size.height / 1.43,
-                decoration: BoxDecoration(
-                    color: Theme.of(context).accentColor,
-                    borderRadius: BorderRadius.circular(50)),
-                child: Column(children: [
+              child: Column(
+                children: [
                   Container(
                     child: Center(
                       child: Container(
@@ -86,10 +75,12 @@ class _MyWeatherScreenState extends State<MyWeatherScreen> {
                       ),
                     ),
                   ),
-                ]),
+                ],
               ),
             ),
-          ],
-        ));
+          ),
+        ],
+      ),
+    );
   }
 }

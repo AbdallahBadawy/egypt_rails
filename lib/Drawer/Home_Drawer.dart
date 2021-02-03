@@ -1,5 +1,6 @@
 import 'package:egypt_rails/Colors.dart';
 import 'package:egypt_rails/Drawer/About%20Us/About_Us.dart';
+import 'package:egypt_rails/Drawer/contact%20us/contactus.dart';
 import 'package:flutter/material.dart';
 import 'package:share/share.dart';
 import 'Help_Screens/Help_Screen.dart';
@@ -40,7 +41,8 @@ Widget homeDrawer(BuildContext context) {
               onTap: () {
                 Share.share('https://www.google.com');
               }),
-          _titleCard(context: context, title: 'Contact Us', icon: Icons.call, onTap: () {}),
+          _titleCard(context: context, title: 'Contact Us', icon: Icons.call, onTap: () {Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ContactUs()));}),
           _titleCard(context: context, title: 'Rate This App', icon: Icons.star, onTap: () {}),
           _titleCard(context: context, title: 'Favourites', icon: Icons.favorite, onTap: () {}),
           _titleCard(context: context, 

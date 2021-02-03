@@ -58,6 +58,8 @@ flutter:
      - assets/images/fav.png
      - assets/images/fav2x.png
      - assets/images/About Us.png
+     - assets/images/contact2x.png
+     - assets/images/contact.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
