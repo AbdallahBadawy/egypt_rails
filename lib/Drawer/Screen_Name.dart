@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 Widget screenName({BuildContext context, String text, Function onPressed}) {
   return Positioned(
-    top: MediaQuery.of(context).size.height / 40,
+    top: MediaQuery.of(context).size.height / 41,
     left: 5,
     child: Row(
       crossAxisAlignment: CrossAxisAlignment.end,

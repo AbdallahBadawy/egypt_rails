@@ -98,7 +98,7 @@ class _LiveTrainViewScreenState extends State<LiveTrainViewScreen> {
                                       top: 5, bottom: 5, left: 10),
                                   filled: true,
                                   fillColor:
-                                      Color(getColorHexFromStr('#F8D5A799')),
+                                      Color(getColorHexFromStr('#F8D5A7')),
                                   border: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(12),
                                       borderSide: BorderSide.none)),

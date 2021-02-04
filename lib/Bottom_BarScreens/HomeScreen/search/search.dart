@@ -18,12 +18,33 @@ class _SearchScreenState extends State<SearchScreen> {
       body: Stack(
         children: [
           Positioned(
+            top: MediaQuery.of(context).size.height / 31,
             child: Container(
               child: background(context),
             ),
           ),
           //notificationsButton(context),
-          screenName(context: context, text: 'Entertainment', onPressed: () {}),
+          Positioned(
+            top: MediaQuery.of(context).size.height / 15,
+            left: 5,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                IconButton(
+                  icon: Icon(
+                    Icons.arrow_back_ios,
+                    size: 40,
+                  ),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                ),
+                Text('Search',
+                    style:
+                        TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
+              ],
+            ),
+          ),
           Positioned(
             top: MediaQuery.of(context).size.height / 6,
             left: MediaQuery.of(context).size.height / 23,

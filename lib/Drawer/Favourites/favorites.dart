@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../../Background.dart';
 import '../../NotificationsButton.dart';
 
-
 class Favorites extends StatefulWidget {
   @override
   _FavoritesState createState() => _FavoritesState();
@@ -14,20 +13,33 @@ class _FavoritesState extends State<Favorites> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Stack(children: [
-      background(context),
-      notificationsButton(context),
       Positioned(
-        top: MediaQuery.of(context).size.height / 25,
-        child: Row(
-          children: [
-            Icon(Icons.arrow_back, size: 50),
-            Text("Favorites",
-                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
-          ],
-        ),
+        top: MediaQuery.of(context).size.height / 31,
+        child: background(context),
       ),
       Positioned(
-        top: MediaQuery.of(context).size.height / 8,
+          top: MediaQuery.of(context).size.height / 14,
+          left: MediaQuery.of(context).size.width / 30,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              IconButton(
+                icon: Icon(
+                  Icons.arrow_back_ios,
+                  size: 40,
+                ),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
+              Text(
+                'Favorites',
+                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+              ),
+            ],
+          )),
+      Positioned(
+        top: MediaQuery.of(context).size.height / 6.5,
         left: 40,
         child: Center(
           child: Container(

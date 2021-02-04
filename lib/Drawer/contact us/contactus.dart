@@ -19,12 +19,27 @@ class _ContactUsState extends State<ContactUs> {
             top: MediaQuery.of(context).size.height / 31,
             child: background(context),
           ),
-          screenName(
-              context: context,
-              text: 'Contact Us',
-              onPressed: () {
-                Navigator.pop(context);
-              }),
+          Positioned(
+              top: MediaQuery.of(context).size.height / 14,
+              left: MediaQuery.of(context).size.width / 30,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  IconButton(
+                    icon: Icon(
+                      Icons.arrow_back_ios,
+                      size: 40,
+                    ),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                  ),
+                  Text(
+                    'Contact Us',
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                  ),
+                ],
+              )),
           Positioned(
             top: MediaQuery.of(context).size.height / 5.5,
             left: 30,
