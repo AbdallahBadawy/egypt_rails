@@ -2,10 +2,10 @@ import 'package:egypt_rails/Bottom_BarScreens/HomeScreen/search/search.dart';
 import 'package:egypt_rails/Drawer/Home_Drawer.dart';
 import 'package:flutter/material.dart';
 
-import '../../Background.dart';
-import '../../Colors.dart';
-import '../../NotificationsButton.dart';
-import 'home_Widgets.dart';
+import '../../../Background.dart';
+import '../../../Colors.dart';
+import '../../../NotificationsButton.dart';
+import '../home_Widgets.dart';
 
 class TrainBetweenScreen extends StatefulWidget {
   @override

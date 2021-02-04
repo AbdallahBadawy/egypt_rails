@@ -1,7 +1,8 @@
-import 'package:egypt_rails/Bottom_BarScreens/HomeScreen/TrainBetween.dart';
+import 'package:egypt_rails/Bottom_BarScreens/HomeScreen/Home_Content/LiveTrainView.dart';
 import 'package:egypt_rails/Bottom_BarScreens/HomeScreen/search/search.dart';
 import 'package:flutter/material.dart';
 import '../../Colors.dart';
+import 'Home_Content/TrainBetween.dart';
 
 Widget drawerMenu({BuildContext context, Function onPressed}) {
   return Positioned(
@@ -198,7 +199,10 @@ Widget trainLines(
           context: context,
           image: 'assets/images/Live Train View.png',
           title: 'Live Train View',
-          onTap: null),
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => LiveTrainViewScreen()));
+          }),
       preferences(
           context: context,
           image: 'assets/images/Destination Alarm.png',
