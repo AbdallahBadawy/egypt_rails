@@ -78,7 +78,7 @@ class _TrainBetweenScreenState extends State<TrainBetweenScreen> {
                           height: 30,
                           padding: EdgeInsets.symmetric(horizontal: 10),
                           decoration: BoxDecoration(
-                              color: Color(getColorHexFromStr('#F8D5A799')),
+                              color: Color(getColorHexFromStr('#F8D5A7')),
                               borderRadius: BorderRadius.circular(8)),
                           child: DropdownButton(
                             value: newValue,

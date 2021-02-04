@@ -1,8 +1,10 @@
 import 'package:egypt_rails/Bottom_BarScreens/HomeScreen/search/Payment/payment.dart';
+import 'package:egypt_rails/Drawer/Screen_Name.dart';
 import 'package:flutter/material.dart';
 
 import '../../../Background.dart';
 import '../../../Colors.dart';
+import '../home_Widgets.dart';
 
 class SearchScreen extends StatefulWidget {
   @override
@@ -16,21 +18,12 @@ class _SearchScreenState extends State<SearchScreen> {
       body: Stack(
         children: [
           Positioned(
-            top: MediaQuery.of(context).size.height / 31,
-            child: background(context),
-          ),
-          Positioned(
-            top: MediaQuery.of(context).size.height / 15,
-            child: Row(
-              children: [
-                Icon(Icons.arrow_back, size: 50),
-                Text(
-                  "Search",
-                  style: TextStyle(fontSize: 28),
-                ),
-              ],
+            child: Container(
+              child: background(context),
             ),
           ),
+          //notificationsButton(context),
+          screenName(context: context, text: 'Entertainment', onPressed: () {}),
           Positioned(
             top: MediaQuery.of(context).size.height / 6,
             left: MediaQuery.of(context).size.height / 23,
@@ -44,22 +37,33 @@ class _SearchScreenState extends State<SearchScreen> {
               child: Column(
                 children: [
                   Container(
-                    child: Icon(
-                      Icons.favorite,
-                      color: Color(0XFFF07611),
-                      size: 50,
-                    ),
-                    decoration: BoxDecoration(
-                      color: Color(0XFFFFFFFF),
-                      borderRadius: BorderRadius.circular(25),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 20, vertical: 20),
+                          child: Text(
+                            'Available trains : 24',
+                            style: TextStyle(
+                                color: Colors.black.withOpacity(0.65),
+                                fontSize: 22,
+                                fontWeight: FontWeight.w700),
+                          ),
+                        ),
+                        textFormField(context, 'From'),
+                        SizedBox(height: 10),
+                        textFormField(context, 'To'),
+                        //SizedBox(height: 10),
+                      ],
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 1),
+                    padding: const EdgeInsets.only(top: 0),
                     child: Center(
                       child: Container(
                         margin: EdgeInsets.all(5),
-                        height: MediaQuery.of(context).size.height * 0.64,
+                        height: MediaQuery.of(context).size.height * 0.55,
                         child: ListView.builder(
                           scrollDirection: Axis.vertical,
                           itemCount: 10,
@@ -99,18 +103,38 @@ class _SearchScreenState extends State<SearchScreen> {
                                             ),
                                           ],
                                         )),
-                                        SizedBox(
-                                          width: MediaQuery.of(context)
-                                                  .size
-                                                  .width *
-                                              .28,
-                                        ),
-                                        Expanded(
-                                          child: Container(
-                                            child: Row(
-                                              children: [
-                                                Container(
-                                                  child: Center(
+                                        Container(
+                                          child: Row(
+                                            children: [
+                                              Container(
+                                                child: Center(
+                                                  child: Container(
+                                                    width: 40,
+                                                    height: 40,
+                                                    decoration: BoxDecoration(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              40),
+                                                    ),
+                                                    child: Image(
+                                                      image: AssetImage(
+                                                          'assets/images/fav.png'),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              Container(
+                                                child: Center(
+                                                  child: InkWell(
+                                                    onTap: () {
+                                                      Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute(
+                                                          builder: (context) =>
+                                                              Payment(),
+                                                        ),
+                                                      );
+                                                    },
                                                     child: Container(
                                                       width: 40,
                                                       height: 40,
@@ -121,43 +145,13 @@ class _SearchScreenState extends State<SearchScreen> {
                                                       ),
                                                       child: Image(
                                                         image: AssetImage(
-                                                            'assets/images/fav.png'),
+                                                            'assets/images/cash-payment.png'),
                                                       ),
                                                     ),
                                                   ),
                                                 ),
-                                                Container(
-                                                  child: Center(
-                                                    child: InkWell(
-                                                      onTap: () {
-                                                        Navigator.push(
-                                                          context,
-                                                          MaterialPageRoute(
-                                                            builder:
-                                                                (context) =>
-                                                                    Payment(),
-                                                          ),
-                                                        );
-                                                      },
-                                                      child: Container(
-                                                        width: 40,
-                                                        height: 40,
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(40),
-                                                        ),
-                                                        child: Image(
-                                                          image: AssetImage(
-                                                              'assets/images/cash-payment.png'),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
+                                              ),
+                                            ],
                                           ),
                                         ),
                                       ],

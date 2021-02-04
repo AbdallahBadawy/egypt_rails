@@ -52,7 +52,7 @@ Widget textFormField(BuildContext context, String text) {
               hintText: '',
               contentPadding: EdgeInsets.only(top: 5, bottom: 5, left: 10),
               filled: true,
-              fillColor: Color(getColorHexFromStr('#F8D5A799')),
+              fillColor: Color(getColorHexFromStr('#F8D5A7')),
               suffixIcon: Icon(Icons.search),
               border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
@@ -123,7 +123,7 @@ Widget trainLines(
               height: 30,
               padding: EdgeInsets.symmetric(horizontal: 10),
               decoration: BoxDecoration(
-                  color: Color(getColorHexFromStr('#F8D5A799')),
+                  color: Color(getColorHexFromStr('#F8D5A7')),
                   borderRadius: BorderRadius.circular(8)),
               child: DropdownButton(
                 value: newValue,

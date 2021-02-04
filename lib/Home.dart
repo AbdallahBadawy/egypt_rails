@@ -16,6 +16,7 @@ class _FavoritesState extends State<Favorites> {
       children: [
         background(context),
         notificationsButton(context),
+       
       ],
     ));
   }
