@@ -1,10 +1,11 @@
-import 'package:egypt_rails/Colors.dart';
 import 'package:egypt_rails/Drawer/About%20Us/About_Us.dart';
 import 'package:egypt_rails/Drawer/Favourites/favorites.dart';
 import 'package:egypt_rails/Drawer/contact%20us/contactus.dart';
 import 'package:flutter/material.dart';
 import 'package:share/share.dart';
+import '../Colors.dart';
 import 'Help_Screens/Help_Screen.dart';
+import 'MyAccount/My_Account.dart';
 
 Widget _titleCard(
     {BuildContext context, String title, IconData icon, Function onTap}) {
@@ -39,7 +40,14 @@ Widget homeDrawer(BuildContext context) {
               context: context,
               title: 'Muhamed Ahmed',
               icon: Icons.person,
-              onTap: () {}),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => MyAccountScreen(),
+                  ),
+                );
+              }),
           _titleCard(
               context: context,
               title: 'Settings',

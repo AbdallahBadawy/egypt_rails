@@ -24,9 +24,9 @@ class _DestinationAlarmScreenState extends State<DestinationAlarmScreen> {
               child: background(context),
             ),
           ),
-          notificationsButton(context),
           Positioned(
             top: MediaQuery.of(context).size.height / 15,
+            left: 5,
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
@@ -39,19 +39,9 @@ class _DestinationAlarmScreenState extends State<DestinationAlarmScreen> {
                     Navigator.pop(context);
                   },
                 ),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text('T',
-                        style: TextStyle(
-                            fontSize: 55,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'Lucida')),
-                    Text('icketaway',
-                        style: TextStyle(
-                            fontSize: 22, fontWeight: FontWeight.bold)),
-                  ],
-                ),
+                Text('Alarm',
+                    style:
+                        TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
               ],
             ),
           ),
