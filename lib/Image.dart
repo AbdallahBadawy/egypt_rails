@@ -6,7 +6,7 @@ Widget image(BuildContext context) {
     height: MediaQuery.of(context).size.height,
     child: Image(
       image: AssetImage('assets/images/image.jpg'),
-      fit: BoxFit.fill,
+      fit: BoxFit.cover,
     ),
   );
 }

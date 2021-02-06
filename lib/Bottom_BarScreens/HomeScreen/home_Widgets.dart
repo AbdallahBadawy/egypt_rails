@@ -2,6 +2,7 @@ import 'package:egypt_rails/Bottom_BarScreens/HomeScreen/Home_Content/LiveTrainV
 import 'package:egypt_rails/Bottom_BarScreens/HomeScreen/search/search.dart';
 import 'package:flutter/material.dart';
 import '../../Colors.dart';
+import 'DestinationAlarm/Destination_Alarm.dart';
 import 'Home_Content/TrainBetween.dart';
 
 Widget drawerMenu({BuildContext context, Function onPressed}) {
@@ -207,7 +208,10 @@ Widget trainLines(
           context: context,
           image: 'assets/images/Destination Alarm.png',
           title: 'Destination Alarm',
-          onTap: null),
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => DestinationAlarmScreen()));
+          }),
     ],
   );
 }

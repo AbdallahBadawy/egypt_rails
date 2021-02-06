@@ -1,10 +1,10 @@
-import 'package:egypt_rails/Bottom_BarScreens/DestinationAlarm/Destination_Alarm.dart';
-import 'package:egypt_rails/Bottom_BarScreens/LoginScreen/login.dart';
-import 'package:egypt_rails/Bottom_BarScreens/MyAccount/My_Account.dart';
-import 'package:egypt_rails/Bottom_BarScreens/SignScreen/SingUpScreen.dart';
+
+
 import 'package:flutter/material.dart';
 
 import 'Colors.dart';
+import 'LoginScreen/login.dart';
+import 'SignScreen/SingUpScreen.dart';
 
 void main() => runApp(MyApp());
 
@@ -26,7 +26,7 @@ class _MyAppState extends State<MyApp> {
         accentColor: Color(getColorHexFromStr('#FDF2E4E6')),
         fontFamily: 'Roboto',
       ),
-      home: LoginScreen(),
+      home: SignUpScreen(),
     );
   }
 }

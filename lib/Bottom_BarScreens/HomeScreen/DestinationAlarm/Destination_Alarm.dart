@@ -1,12 +1,10 @@
+import 'package:egypt_rails/Drawer/Home_Drawer.dart';
 import 'package:flutter/material.dart';
 
-import '../../Background.dart';
-import '../../Colors.dart';
-import '../../Drawer/Home_Drawer.dart';
-import '../../NotificationsButton.dart';
-import '../HomeScreen/home_Widgets.dart';
-import '../HomeScreen/home_Widgets.dart';
-import '../HomeScreen/search/search.dart';
+import '../../../Background.dart';
+import '../../../Colors.dart';
+import '../../../NotificationsButton.dart';
+import '../home_Widgets.dart';
 
 class DestinationAlarmScreen extends StatefulWidget {
   @override
@@ -14,36 +12,58 @@ class DestinationAlarmScreen extends StatefulWidget {
 }
 
 class _DestinationAlarmScreenState extends State<DestinationAlarmScreen> {
-  GlobalKey<ScaffoldState> _globalKey = GlobalKey<ScaffoldState>();
-
-  onChanged(value) {
-    setState(() {
-      group = value;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: _globalKey,
       backgroundColor: Colors.white,
       body: Stack(
         children: [
-          background(context),
-          drawerMenu(
-              context: context,
-              onPressed: () {
-                _globalKey.currentState.openDrawer();
-              }),
-          notificationsButton(context),
-          appName(context),
           Positioned(
-              top: MediaQuery.of(context).size.height / 8,
-              left: 40,
+            top: MediaQuery.of(context).size.height / 31,
+            child: Container(
+              child: background(context),
+            ),
+          ),
+          notificationsButton(context),
+          Positioned(
+            top: MediaQuery.of(context).size.height / 15,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                IconButton(
+                  icon: Icon(
+                    Icons.arrow_back_ios,
+                    size: 40,
+                  ),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text('T',
+                        style: TextStyle(
+                            fontSize: 55,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Lucida')),
+                    Text('icketaway',
+                        style: TextStyle(
+                            fontSize: 22, fontWeight: FontWeight.bold)),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          Positioned(
+              top: MediaQuery.of(context).size.height / 6,
               child: Container(
+                margin: EdgeInsets.symmetric(
+                  horizontal: MediaQuery.of(context).size.width * .1,
+                ),
                 padding: EdgeInsets.all(10),
-                width: MediaQuery.of(context).size.width - 80,
-                height: MediaQuery.of(context).size.height / 1.2,
+                width: MediaQuery.of(context).size.width * .8,
+                height: MediaQuery.of(context).size.height / 1.25,
                 decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
