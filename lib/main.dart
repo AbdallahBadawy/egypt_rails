@@ -1,9 +1,7 @@
-
-
 import 'package:flutter/material.dart';
 
 import 'Colors.dart';
-import 'LoginScreen/login.dart';
+
 import 'SignScreen/SingUpScreen.dart';
 
 void main() => runApp(MyApp());
