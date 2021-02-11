@@ -8,7 +8,7 @@ Widget notificationsButton(BuildContext context) {
     child: IconButton(
         icon: Icon(
           Icons.notifications,
-          size: MediaQuery.of(context).size.width / 7.4,
+          size: MediaQuery.of(context).size.width / 7.8,
           color: Theme.of(context).primaryColor,
         ),
         onPressed: () {
