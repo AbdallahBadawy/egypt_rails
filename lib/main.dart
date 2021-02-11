@@ -1,7 +1,6 @@
-
-
 import 'package:flutter/material.dart';
-
+import 'Bottom_BarScreens/HomeScreen/search/search.dart';
+import 'Home.dart';
 import 'Bottom_BarScreens/Custom_Navigation_Bar.dart';
 import 'Colors.dart';
 import 'LoginScreen/login.dart';
@@ -27,7 +26,7 @@ class _MyAppState extends State<MyApp> {
         accentColor: Color(getColorHexFromStr('#FDF2E4E6')),
         fontFamily: 'Roboto',
       ),
-      home: LoginScreen(),
+      home: CustomNavigationBar(),
     );
   }
 }

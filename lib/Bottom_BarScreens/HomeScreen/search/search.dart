@@ -1,9 +1,9 @@
 import 'package:egypt_rails/Bottom_BarScreens/HomeScreen/search/Payment/payment.dart';
-import 'package:egypt_rails/Drawer/Screen_Name.dart';
+
 import 'package:flutter/material.dart';
 
 import '../../../Background.dart';
-import '../../../Colors.dart';
+
 import '../home_Widgets.dart';
 
 class SearchScreen extends StatefulWidget {
@@ -84,7 +84,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     child: Center(
                       child: Container(
                         margin: EdgeInsets.all(5),
-                        height: MediaQuery.of(context).size.height * 0.55,
+                        height: MediaQuery.of(context).size.height * 0.51,
                         child: ListView.builder(
                           scrollDirection: Axis.vertical,
                           itemCount: 10,
