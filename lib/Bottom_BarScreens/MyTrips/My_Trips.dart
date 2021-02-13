@@ -1,6 +1,4 @@
-import 'package:egypt_rails/Drawer/Screen_Name.dart';
 import 'package:flutter/material.dart';
-
 import '../../Background.dart';
 
 class MyTripsScreen extends StatefulWidget {
@@ -19,13 +17,13 @@ class _MyTripsScreenState extends State<MyTripsScreen> {
                 top: MediaQuery.of(context).size.height / 31,
                 child: background(context)),
             Positioned(
-            top: MediaQuery.of(context).size.height / 12,
-            left: MediaQuery.of(context).size.width / 15,
-            child: Text(
-                  'My Trips',
-                  style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
-                ),
-          ),
+              top: MediaQuery.of(context).size.height / 12,
+              left: MediaQuery.of(context).size.width / 15,
+              child: Text(
+                'My Trips',
+                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+              ),
+            ),
             Positioned(
               top: MediaQuery.of(context).size.height / 5.5,
               left: 30,

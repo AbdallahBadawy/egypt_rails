@@ -1,8 +1,6 @@
 import 'package:egypt_rails/Bottom_BarScreens/Custom_Navigation_Bar.dart';
-import 'package:egypt_rails/Bottom_BarScreens/HomeScreen/Home_Screen.dart';
 import 'package:egypt_rails/SignScreen/SingUpScreen.dart';
 import 'package:flutter/material.dart';
-
 import '../Colors.dart';
 import '../Image.dart';
 

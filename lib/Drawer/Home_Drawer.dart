@@ -17,7 +17,7 @@ Widget _titleCard(
         children: [
           Icon(
             icon,
-            size: MediaQuery.of(context).size.width / 8.5,
+            size: MediaQuery.of(context).size.width / 9,
             color: Color(getColorHexFromStr('#F07611')),
           ),
           SizedBox(width: 20),

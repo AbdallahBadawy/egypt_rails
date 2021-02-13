@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-
 import '../../Background.dart';
 import '../../Colors.dart';
-import '../Screen_Name.dart';
 
 class ContactUs extends StatefulWidget {
   @override

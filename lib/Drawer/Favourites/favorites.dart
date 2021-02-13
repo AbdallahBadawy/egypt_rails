@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import '../../Background.dart';
-import '../../NotificationsButton.dart';
 
 class Favorites extends StatefulWidget {
   @override

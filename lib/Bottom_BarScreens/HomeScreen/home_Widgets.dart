@@ -90,9 +90,9 @@ Widget trainLines(
     {BuildContext context, Function onChanged, Function dropButtonOnChanged}) {
   return Column(
     children: [
-      SizedBox(height: 80),
+      SizedBox(height: MediaQuery.of(context).size.height / 9),
       Container(
-        width: MediaQuery.of(context).size.width - 90,
+        width: MediaQuery.of(context).size.width - 80,
         padding: EdgeInsets.all(12),
         decoration: BoxDecoration(
             color: Color(getColorHexFromStr('#F6ECDF')),
