@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'Bottom_BarScreens/HomeScreen/search/search.dart';
-import 'Home.dart';
 import 'Bottom_BarScreens/Custom_Navigation_Bar.dart';
 import 'Colors.dart';
-import 'LoginScreen/login.dart';
-import 'SignScreen/SingUpScreen.dart';
 
 void main() => runApp(MyApp());
 

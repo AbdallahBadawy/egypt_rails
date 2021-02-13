@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:egypt_rails/Bottom_BarScreens/Weather/Weather.dart';
 import 'package:flutter/material.dart';
 
