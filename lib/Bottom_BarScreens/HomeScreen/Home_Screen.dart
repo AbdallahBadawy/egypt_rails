@@ -16,33 +16,31 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       key: _globalKey,
       backgroundColor: Colors.white,
-      body: ListView(
-        children: [
-          Stack(
-            children: [
-              background(context),
-              drawerMenu(
-                  context: context,
-                  onPressed: () {
-                    _globalKey.currentState.openDrawer();
-                  }),
-              notificationsButton(context),
-              appName(context),
-              trainLines(
-                  context: context,
-                  onChanged: (value) {
-                    setState(() {
-                      group = value;
-                    });
-                  },
-                  dropButtonOnChanged: (value) {
-                    setState(() {
-                      newValue = value;
-                    });
-                  }),
-            ],
-          ),
-        ],
+      body: SafeArea(
+        child: Stack(
+          children: [
+            background(context),
+            drawerMenu(
+                context: context,
+                onPressed: () {
+                  _globalKey.currentState.openDrawer();
+                }),
+            notificationsButton(context),
+            appName(context),
+            trainLines(
+                context: context,
+                onChanged: (value) {
+                  setState(() {
+                    group = value;
+                  });
+                },
+                dropButtonOnChanged: (value) {
+                  setState(() {
+                    newValue = value;
+                  });
+                }),
+          ],
+        ),
       ),
       drawer: homeDrawer(context),
     );

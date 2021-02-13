@@ -188,30 +188,43 @@ Widget trainLines(
         ),
       ),
       SizedBox(height: 12),
-      preferences(
-          context: context,
-          image: 'assets/images/Live Train View.png',
-          title: 'Train Between',
-          onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => TrainBetweenScreen()));
-          }),
-      preferences(
-          context: context,
-          image: 'assets/images/Live Train View.png',
-          title: 'Live Train View',
-          onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => LiveTrainViewScreen()));
-          }),
-      preferences(
-          context: context,
-          image: 'assets/images/Destination Alarm.png',
-          title: 'Destination Alarm',
-          onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => DestinationAlarmScreen()));
-          }),
+      Expanded(
+        child: ListView(
+          scrollDirection: Axis.vertical,
+          children: [
+            preferences(
+                context: context,
+                image: 'assets/images/Live Train View.png',
+                title: 'Train Between',
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => TrainBetweenScreen()));
+                }),
+            preferences(
+                context: context,
+                image: 'assets/images/Live Train View.png',
+                title: 'Live Train View',
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => LiveTrainViewScreen()));
+                }),
+            preferences(
+                context: context,
+                image: 'assets/images/Destination Alarm.png',
+                title: 'Destination Alarm',
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => DestinationAlarmScreen()));
+                }),
+          ],
+        ),
+      )
     ],
   );
 }

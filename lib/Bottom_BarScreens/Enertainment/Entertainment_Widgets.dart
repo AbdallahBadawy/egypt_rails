@@ -1,6 +1,17 @@
 import 'package:egypt_rails/Colors.dart';
 import 'package:flutter/material.dart';
 
+Widget pageName(BuildContext context) {
+  return Positioned(
+    top: MediaQuery.of(context).size.height / 12,
+    left: MediaQuery.of(context).size.width / 15,
+    child: Text(
+      'My Trips',
+      style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+    ),
+  );
+}
+
 Widget entertainment(BuildContext context) {
   return Container(
     width: MediaQuery.of(context).size.width - 70,
@@ -43,41 +54,51 @@ Widget entertainment(BuildContext context) {
           ),
         ),
         SizedBox(height: 20),
-        Text(
-          'Videos',
-          style: TextStyle(
-              color: Theme.of(context).primaryColor,
-              fontSize: 22,
-              fontWeight: FontWeight.bold),
-        ),
-        SizedBox(
-          height: 220,
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: 7,
-            itemBuilder: (context, index) {
-              return InkWell(onTap: () {}, child: videos(context));
-            },
+        Expanded(
+          child: ListView(
+            children: [
+              Column(
+                children: [
+                  Text(
+                    'Videos',
+                    style: TextStyle(
+                        color: Theme.of(context).primaryColor,
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    height: 220,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: 7,
+                      itemBuilder: (context, index) {
+                        return InkWell(onTap: () {}, child: videos(context));
+                      },
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  Text(
+                    'Novels',
+                    style: TextStyle(
+                        color: Theme.of(context).primaryColor,
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    height: 220,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: 7,
+                      itemBuilder: (context, index) {
+                        return InkWell(onTap: () {}, child: novels(context));
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
-        ),
-        SizedBox(height: 10),
-        Text(
-          'Novels',
-          style: TextStyle(
-              color: Theme.of(context).primaryColor,
-              fontSize: 22,
-              fontWeight: FontWeight.bold),
-        ),
-        SizedBox(
-          height: 220,
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: 7,
-            itemBuilder: (context, index) {
-              return InkWell(onTap: () {}, child: novels(context));
-            },
-          ),
-        ),
+        )
       ],
     ),
   );

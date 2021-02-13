@@ -1,9 +1,6 @@
 import 'package:egypt_rails/Bottom_BarScreens/HomeScreen/search/Payment/payment.dart';
-
 import 'package:flutter/material.dart';
-
 import '../../../Background.dart';
-
 import '../home_Widgets.dart';
 
 class SearchScreen extends StatefulWidget {
