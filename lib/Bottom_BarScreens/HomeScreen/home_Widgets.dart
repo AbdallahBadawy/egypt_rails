@@ -23,7 +23,6 @@ Widget appName(BuildContext context) {
     top: 15,
     left: MediaQuery.of(context).size.width / 7.2,
     child: Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text('T',
             style: TextStyle(
