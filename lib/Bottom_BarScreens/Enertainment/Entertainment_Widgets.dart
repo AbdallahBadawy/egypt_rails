@@ -3,20 +3,25 @@ import 'package:flutter/material.dart';
 
 Widget pageName(BuildContext context) {
   return Positioned(
-    top: MediaQuery.of(context).size.height / 12,
+    top: MediaQuery.of(context).size.height / 26,
     left: MediaQuery.of(context).size.width / 15,
     child: Text(
-      'My Trips',
-      style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+      'Entertainment',
+      style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
     ),
   );
 }
 
 Widget entertainment(BuildContext context) {
   return Container(
-    width: MediaQuery.of(context).size.width - 70,
+    width: MediaQuery.of(context).size.width *.8,
     padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-    margin: EdgeInsets.only(left: 35, right: 35, top: 80, bottom: 10),
+    margin: EdgeInsets.only(
+        left: MediaQuery.of(context).size.width * .1,
+        right: MediaQuery.of(context).size.width * .1,
+        top: MediaQuery.of(context).size.height /9,
+        bottom: 10
+        ),
     decoration: BoxDecoration(
         color: Color(getColorHexFromStr('#F6ECDF')),
         borderRadius: BorderRadius.circular(40),
