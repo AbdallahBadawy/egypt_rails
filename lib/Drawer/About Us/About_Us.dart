@@ -8,22 +8,20 @@ class AboutUs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        children: [
-          Stack(
-            children: [
-              background(context),
-              notificationsButton(context),
-              screenName(
-                  context: context,
-                  text: 'About Us',
-                  onPressed: () {
-                    Navigator.pop(context);
-                  }),
-              aboutInfo(context),
-            ],
-          )
-        ],
+      body: SafeArea(
+        child: Stack(
+          children: [
+            background(context),
+            notificationsButton(context),
+            screenName(
+                context: context,
+                text: 'About Us',
+                onPressed: () {
+                  Navigator.pop(context);
+                }),
+            aboutInfo(context),
+          ],
+        ),
       ),
     );
   }

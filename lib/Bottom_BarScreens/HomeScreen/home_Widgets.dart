@@ -23,7 +23,6 @@ Widget appName(BuildContext context) {
     top: 15,
     left: MediaQuery.of(context).size.width / 7.2,
     child: Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text('T',
             style: TextStyle(
@@ -91,9 +90,9 @@ Widget trainLines(
     {BuildContext context, Function onChanged, Function dropButtonOnChanged}) {
   return Column(
     children: [
-      SizedBox(height: 80),
+      SizedBox(height: MediaQuery.of(context).size.height / 9),
       Container(
-        width: MediaQuery.of(context).size.width - 90,
+        width: MediaQuery.of(context).size.width - 80,
         padding: EdgeInsets.all(12),
         decoration: BoxDecoration(
             color: Color(getColorHexFromStr('#F6ECDF')),
@@ -188,30 +187,43 @@ Widget trainLines(
         ),
       ),
       SizedBox(height: 12),
-      preferences(
-          context: context,
-          image: 'assets/images/Live Train View.png',
-          title: 'Train Between',
-          onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => TrainBetweenScreen()));
-          }),
-      preferences(
-          context: context,
-          image: 'assets/images/Live Train View.png',
-          title: 'Live Train View',
-          onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => LiveTrainViewScreen()));
-          }),
-      preferences(
-          context: context,
-          image: 'assets/images/Destination Alarm.png',
-          title: 'Destination Alarm',
-          onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => DestinationAlarmScreen()));
-          }),
+      Expanded(
+        child: ListView(
+          scrollDirection: Axis.vertical,
+          children: [
+            preferences(
+                context: context,
+                image: 'assets/images/Live Train View.png',
+                title: 'Train Between',
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => TrainBetweenScreen()));
+                }),
+            preferences(
+                context: context,
+                image: 'assets/images/Live Train View.png',
+                title: 'Live Train View',
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => LiveTrainViewScreen()));
+                }),
+            preferences(
+                context: context,
+                image: 'assets/images/Destination Alarm.png',
+                title: 'Destination Alarm',
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => DestinationAlarmScreen()));
+                }),
+          ],
+        ),
+      )
     ],
   );
 }
